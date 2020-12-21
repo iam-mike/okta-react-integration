@@ -6,7 +6,7 @@ export default class AboutPage extends Component{
     <div className="container">
       <h1>About Us</h1>
       <p>
-        This is the page that tells you all about us.
+        React SPA. Developed by Mike. Authentication by Okta
       </p>
     </div>
     )

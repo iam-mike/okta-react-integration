@@ -8,11 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mike Witts",
   "license": "ISC",
   "dependencies": {
     "@okta/okta-signin-widget": "^2.3.0",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2"

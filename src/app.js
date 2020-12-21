@@ -7,6 +7,7 @@ import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
 import ContactPage from './components/contact/ContactPage';
 import '../scss/site.scss';
+import 'bootstrap/dist/css/bootstrap.css';
 import LoginPage from './components/auth/LoginPage';
 
 render(

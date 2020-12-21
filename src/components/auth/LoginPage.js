@@ -7,7 +7,7 @@ export default class LoginPage extends React.Component {
     this.state = { user: null };
     this.widget = new OktaSignIn({
       baseUrl: "https://decedo.okta.com",
-      clientId: "0oaldd59xqZ1CXGL25d5",
+      clientId: "0oa1cpd64lCoKhf9b5d6",
       redirectUri: "http://localhost:3000",
       authParams: {
         responseType: "id_token",
@@ -18,6 +18,7 @@ export default class LoginPage extends React.Component {
   }
 
   componentDidMount() {
+    console.log("componentDid<Mount...");
     this.widget.session.get((response) => {
       if (response.status !== "INACTIVE") {
         this.setState({ user: response.login });
@@ -28,11 +29,13 @@ export default class LoginPage extends React.Component {
   }
 
   showLogin() {
+    console.log("showLogin...");
     Backbone.history.stop();
     this.widget.renderEl(
       { el: this.loginContainer },
       (response) => {
         this.setState({ user: response.claims.email });
+        this.widget.remove();
       },
       (err) => {
         console.log(err);
@@ -41,6 +44,7 @@ export default class LoginPage extends React.Component {
   }
 
   logout() {
+    console.log("logout...");
     this.widget.signOut(() => {
       this.setState({ user: null });
       this.showLogin();
@@ -48,6 +52,7 @@ export default class LoginPage extends React.Component {
   }
 
   render() {
+    console.log("rendering...");
     return (
       <div>
         {this.state.user ? (
